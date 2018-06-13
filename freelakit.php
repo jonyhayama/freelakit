@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Freela Kit
-Plugin URI: 
+Plugin URI: https://github.com/jonyhayama/freelakit
 Description: A simple kit to help freelancers
 Version: 0.1
 Author: Jony Hayama

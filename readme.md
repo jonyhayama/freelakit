@@ -2,7 +2,7 @@
 
 **Under Development**
 
-Plugin URI: 
+Plugin URI: https://github.com/jonyhayama/freelakit
 
 Description: A simple kit to help freelancers
 
