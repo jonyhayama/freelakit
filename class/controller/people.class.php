@@ -1,5 +1,8 @@
 <?php
 namespace FreelaKit\controller;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
 class People{
 	public function __construct(){
 		$this->add_hooks();

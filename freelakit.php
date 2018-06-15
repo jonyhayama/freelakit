@@ -12,6 +12,7 @@ define( 'FREELAKIT_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'FREELAKIT_PLUGIN_URL', plugins_url('', __FILE__ ) );
 define( 'FREELAKIT_ASSETS_URL', FREELAKIT_PLUGIN_URL . '/assets' );
 
+require_once( FREELAKIT_DIR_PATH . 'lib/carbon-fields/carbon-fields-plugin.php' );
 require_once( FREELAKIT_DIR_PATH . 'class/freelakit.class.php' );
 
 function freelakit( $module = '' ){
