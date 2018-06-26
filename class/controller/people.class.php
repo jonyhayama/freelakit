@@ -1,7 +1,7 @@
 <?php
 namespace FreelaKit\controller;
-use Carbon_Fields\Container;
-use Carbon_Fields\Field;
+use \Carbon_Fields\Container;
+use \Carbon_Fields\Field;
 
 class People{
 	public function __construct(){
@@ -11,6 +11,8 @@ class People{
 		add_action( 'init', array( $this, 'register_taxonomy' ) );
 		add_action( 'init', array( $this, 'register_post_type' ) );
 		add_action( 'admin_init', array( $this, 'add_custom_capabilities' ), 999 );
+		
+		add_action( 'plugins_loaded', array( $this, 'register_fields' ) );
 	}
 	public function register_post_type(){
 		$labels = array(
@@ -81,7 +83,7 @@ class People{
 		$labels = array(
 			'name'                       => _x( 'Person Roles', 'Taxonomy General Name', 'freelakit' ),
 			'singular_name'              => _x( 'Person Role', 'Taxonomy Singular Name', 'freelakit' ),
-			'menu_name'                  => __( 'Role', 'freelakit' ),
+			'menu_name'                  => __( 'Roles', 'freelakit' ),
 			'all_items'                  => __( 'All Person Roles', 'freelakit' ),
 			'parent_item'                => __( 'Parent Item', 'freelakit' ),
 			'parent_item_colon'          => __( 'Parent Item:', 'freelakit' ),
@@ -137,5 +139,25 @@ class People{
 			// Taxonomy
 			$role->add_cap( 'manage_person_roles' );
 		}
+	}
+	
+	public function get_roles_assoc_array(){
+		$array = array();
+		$terms = get_terms( array(
+			'taxonomy' => 'person_role',
+			'hide_empty' => false
+		) );
+		foreach( $terms as $term ){
+			$array[$term->term_id] = $term->name;
+		}
+		return $array;
+	}
+	
+	public function register_fields(){
+		Container::make( 'post_meta', __( 'Person Info', 'freelakit' ) )
+			->where( 'post_type', '=', 'person' )
+			->add_tab( __( 'Profile', 'freelakit' ), array(
+				Field::make( 'select', 'person_role', __( 'Person Role', 'frelakit' ) )->set_options( array( $this, 'get_roles_assoc_array' ) ),
+			) );
 	}
 }

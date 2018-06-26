@@ -1,12 +1,19 @@
 <?php
 class FreelaKit{
 	public function __construct(){
+		add_action( 'plugins_loaded', array( $this, 'load_carbon_fields' ) );
+		
 		$this->load_classes();
 	}
 	
 	public function load_classes(){
-		require FREELAKIT_DIR_PATH . '/class/controller/people.class.php';
+		require FREELAKIT_DIR_PATH . 'class/controller/people.class.php';
 		$this->people = new FreelaKit\controller\People;
+	}
+	
+	public function load_carbon_fields(){
+		require FREELAKIT_DIR_PATH . 'lib/carbon-fields/vendor/autoload.php';
+		\Carbon_Fields\Carbon_Fields::boot();
 	}
 	
 	public function getModule( $module ){
