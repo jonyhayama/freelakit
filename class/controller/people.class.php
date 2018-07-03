@@ -158,6 +158,24 @@ class People{
 			->where( 'post_type', '=', 'person' )
 			->add_tab( __( 'Profile', 'freelakit' ), array(
 				Field::make( 'select', 'person_role', __( 'Person Role', 'frelakit' ) )->set_options( array( $this, 'get_roles_assoc_array' ) ),
+			) )
+			->add_tab( __( 'Contact Info', 'freelakit' ), array(
+				Field::make( 'textarea', 'address', __( 'Address', 'freelakit' ) )
+				->set_rows(2),
+				Field::make( 'complex', 'phone_numbers' )
+				->set_duplicate_groups_allowed( false )
+				->setup_labels( array(
+					'plural_name' => __( 'Phone Numbers', 'freelakit' ),
+					'singular_name' => __( 'Phone Number', 'freelakit' )
+				) )
+				->add_fields( array(
+					Field::make( 'text', 'number', __( 'Number', 'freelakit' ) )
+					->set_width( 50 )
+					->set_attribute( 'placeholder', __( 'Number', 'freelakit' ) ),
+					Field::make( 'text', 'note', __( 'Note', 'freelakit' ) )
+					->set_width( 50 )
+					->set_attribute( 'placeholder', __( 'Note', 'freelakit' ) ),
+				) ),
 			) );
 	}
 }
