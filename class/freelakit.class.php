@@ -7,6 +7,9 @@ class FreelaKit{
 	}
 	
 	public function load_classes(){
+		require FREELAKIT_DIR_PATH . 'class/customizations/custom-wp-admin.class.php';
+		$this->custom_wp_admin = new FreelaKit\customizations\WPAdmin;
+		
 		require FREELAKIT_DIR_PATH . 'class/controller/people.class.php';
 		$this->people = new FreelaKit\controller\People;
 	}
