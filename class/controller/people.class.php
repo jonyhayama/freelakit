@@ -171,9 +171,11 @@ class People{
 				->add_fields( array(
 					Field::make( 'text', 'number', __( 'Number', 'freelakit' ) )
 					->set_width( 50 )
+					->set_classes( 'hidden-label' )
 					->set_attribute( 'placeholder', __( 'Number', 'freelakit' ) ),
 					Field::make( 'text', 'note', __( 'Note', 'freelakit' ) )
 					->set_width( 50 )
+					->set_classes( 'hidden-label' )
 					->set_attribute( 'placeholder', __( 'Note', 'freelakit' ) ),
 				) ),
 			) );
