@@ -157,7 +157,22 @@ class People{
 		Container::make( 'post_meta', __( 'Person Info', 'freelakit' ) )
 			->where( 'post_type', '=', 'person' )
 			->add_tab( __( 'Profile', 'freelakit' ), array(
-				Field::make( 'select', 'person_role', __( 'Person Role', 'frelakit' ) )->set_options( array( $this, 'get_roles_assoc_array' ) ),
+				Field::make( 'select', 'person_type', __( 'Person Type', 'frelakit' ) )
+				->set_options( array( 
+					'company' => _x( 'Company', 'Person Type', 'freelakit' ), 
+					'person' => _x( 'Individual', 'Person Type', 'freelakit' ) 
+				) ),
+				Field::make( 'text', 'company_name', __( 'Company Name', 'freelakit' ) )
+				->set_conditional_logic( array(
+					array(
+						'field' => 'person_type',
+						'value' => 'company'
+					)
+				) ),
+				Field::make( 'text', 'person_first_name', __( 'First Name', 'freelakit' ) )
+				->set_width( 50 ),
+				Field::make( 'text', 'person_last_name', __('Last Name', 'freelakit' ) )
+				->set_width( 50 )
 			) )
 			->add_tab( __( 'Contact Info', 'freelakit' ), array(
 				Field::make( 'textarea', 'address', __( 'Address', 'freelakit' ) )
@@ -177,7 +192,35 @@ class People{
 					->set_width( 50 )
 					->set_classes( 'hidden-label' )
 					->set_attribute( 'placeholder', __( 'Note', 'freelakit' ) ),
-				) ),
+				) )
+				->set_header_template( '
+					<% if (number) { %>
+						<%- number %> <%- note ? " (" + note + ")" : "" %>
+					<% } %>
+				' ),
+				
+				Field::make( 'complex', 'emails' )
+				->set_duplicate_groups_allowed( false )
+				->setup_labels( array(
+					'plural_name' => __( 'E-mails', 'freelakit' ),
+					'singular_name' => __( 'E-mail', 'freelakit' )
+				) )
+				->add_fields( array(
+					Field::make( 'text', 'email', __( 'E-mail', 'freelakit' ) )
+					->set_width( 50 )
+					->set_classes( 'hidden-label' )
+					->set_attribute( 'placeholder', __( 'E-mail', 'freelakit' ) )
+					->set_attribute( 'type', 'email' ),
+					Field::make( 'text', 'note', __( 'Note', 'freelakit' ) )
+					->set_width( 50 )
+					->set_classes( 'hidden-label' )
+					->set_attribute( 'placeholder', __( 'Note', 'freelakit' ) ),
+				) )
+				->set_header_template( '
+					<% if (email) { %>
+						<%- email %> <%- note ? " (" + note + ")" : "" %>
+					<% } %>
+				' ),
 			) );
 	}
 }
