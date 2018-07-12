@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Freela Kit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 14:44+0000\n"
+"PO-Revision-Date: 2018-07-12 14:44+0000\n"
+"Last-Translator: admfreelakit <contato@jony.co>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: class/controller/people.class.php:19
+msgctxt "Post Type General Name"
+msgid "People"
+msgstr ""
+
+#: class/controller/people.class.php:20
+msgctxt "Post Type Singular Name"
+msgid "Person"
+msgstr ""
+
+#: class/controller/people.class.php:21 class/controller/people.class.php:22
+msgid "People"
+msgstr ""
+
+#: class/controller/people.class.php:23
+msgid "Item Archives"
+msgstr ""
+
+#: class/controller/people.class.php:24
+msgid "Item Attributes"
+msgstr ""
+
+#: class/controller/people.class.php:25 class/controller/people.class.php:89
+msgid "Parent Item:"
+msgstr ""
+
+#: class/controller/people.class.php:26
+msgid "All People"
+msgstr ""
+
+#: class/controller/people.class.php:27
+msgid "Add New Person"
+msgstr ""
+
+#: class/controller/people.class.php:28
+msgid "Add Person"
+msgstr ""
+
+#: class/controller/people.class.php:29
+msgid "New Person"
+msgstr ""
+
+#: class/controller/people.class.php:30
+msgid "Edit Person"
+msgstr ""
+
+#: class/controller/people.class.php:31
+msgid "Update Person"
+msgstr ""
+
+#: class/controller/people.class.php:32
+msgid "View Person"
+msgstr ""
+
+#: class/controller/people.class.php:33
+msgid "View People"
+msgstr ""
+
+#: class/controller/people.class.php:34
+msgid "Search People"
+msgstr ""
+
+#: class/controller/people.class.php:35
+msgid "Not found"
+msgstr ""
+
+#: class/controller/people.class.php:36
+msgid "Not found in Trash"
+msgstr ""
+
+#: class/controller/people.class.php:37
+msgid "Featured Image"
+msgstr ""
+
+#: class/controller/people.class.php:38
+msgid "Set featured image"
+msgstr ""
+
+#: class/controller/people.class.php:39
+msgid "Remove featured image"
+msgstr ""
+
+#: class/controller/people.class.php:40
+msgid "Use as featured image"
+msgstr ""
+
+#: class/controller/people.class.php:41
+msgid "Insert into item"
+msgstr ""
+
+#: class/controller/people.class.php:42
+msgid "Uploaded to this item"
+msgstr ""
+
+#: class/controller/people.class.php:43 class/controller/people.class.php:102
+msgid "Items list"
+msgstr ""
+
+#: class/controller/people.class.php:44 class/controller/people.class.php:103
+msgid "Items list navigation"
+msgstr ""
+
+#: class/controller/people.class.php:45
+msgid "Filter items list"
+msgstr ""
+
+#: class/controller/people.class.php:58
+msgid "Person"
+msgstr ""
+
+#: class/controller/people.class.php:59
+msgid "List of people"
+msgstr ""
+
+#: class/controller/people.class.php:84
+msgctxt "Taxonomy General Name"
+msgid "Person Roles"
+msgstr ""
+
+#: class/controller/people.class.php:85
+msgctxt "Taxonomy Singular Name"
+msgid "Person Role"
+msgstr ""
+
+#: class/controller/people.class.php:86
+msgid "Roles"
+msgstr ""
+
+#: class/controller/people.class.php:87
+msgid "All Person Roles"
+msgstr ""
+
+#: class/controller/people.class.php:88
+msgid "Parent Item"
+msgstr ""
+
+#: class/controller/people.class.php:90
+msgid "New Person Role"
+msgstr ""
+
+#: class/controller/people.class.php:91
+msgid "Add Person Role"
+msgstr ""
+
+#: class/controller/people.class.php:92
+msgid "Edit Person Role"
+msgstr ""
+
+#: class/controller/people.class.php:93
+msgid "Update Person Role"
+msgstr ""
+
+#: class/controller/people.class.php:94
+msgid "View Person Role"
+msgstr ""
+
+#: class/controller/people.class.php:95
+msgid "Separate items with commas"
+msgstr ""
+
+#: class/controller/people.class.php:96
+msgid "Add or remove items"
+msgstr ""
+
+#: class/controller/people.class.php:97
+msgid "Choose from the most used"
+msgstr ""
+
+#: class/controller/people.class.php:98
+msgid "Popular Items"
+msgstr ""
+
+#: class/controller/people.class.php:99
+msgid "Search Items"
+msgstr ""
+
+#: class/controller/people.class.php:100
+msgid "Not Found"
+msgstr ""
+
+#: class/controller/people.class.php:101
+msgid "No items"
+msgstr ""
+
+#: class/controller/people.class.php:157
+msgid "Person Info"
+msgstr ""
+
+#: class/controller/people.class.php:159
+msgid "Profile"
+msgstr ""
+
+#: class/controller/people.class.php:162
+msgctxt "Person Type"
+msgid "Company"
+msgstr ""
+
+#: class/controller/people.class.php:163
+msgctxt "Person Type"
+msgid "Individual"
+msgstr ""
+
+#: class/controller/people.class.php:165
+msgid "Company Name"
+msgstr ""
+
+#: class/controller/people.class.php:172
+msgid "First Name"
+msgstr ""
+
+#: class/controller/people.class.php:174
+msgid "Last Name"
+msgstr ""
+
+#: class/controller/people.class.php:176
+msgid "Website"
+msgstr ""
+
+#: class/controller/people.class.php:178
+msgid "Contact Info"
+msgstr ""
+
+#: class/controller/people.class.php:179
+msgid "Address"
+msgstr ""
+
+#: class/controller/people.class.php:184
+msgid "Phone Numbers"
+msgstr ""
+
+#: class/controller/people.class.php:185
+msgid "Phone Number"
+msgstr ""
+
+#: class/controller/people.class.php:188 class/controller/people.class.php:191
+msgid "Number"
+msgstr ""
+
+#: class/controller/people.class.php:192 class/controller/people.class.php:195
+#: class/controller/people.class.php:215 class/controller/people.class.php:218
+msgid "Note"
+msgstr ""
+
+#: class/controller/people.class.php:206
+msgid "E-mails"
+msgstr ""
+
+#: class/controller/people.class.php:207 class/controller/people.class.php:210
+#: class/controller/people.class.php:213
+msgid "E-mail"
+msgstr ""
+
+#. Name of the plugin
+msgid "Freela Kit"
+msgstr ""
+
+#. Description of the plugin
+msgid "A simple kit to help freelancers"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/jonyhayama/freelakit"
+msgstr ""
+
+#. Author of the plugin
+msgid "Jony Hayama"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://jony.co"
+msgstr ""

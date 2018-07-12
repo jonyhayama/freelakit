@@ -2,6 +2,7 @@
 class FreelaKit{
 	public function __construct(){
 		add_action( 'plugins_loaded', array( $this, 'load_carbon_fields' ) );
+		add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain') );
 		
 		$this->load_classes();
 	}
@@ -17,6 +18,10 @@ class FreelaKit{
 	public function load_carbon_fields(){
 		require FREELAKIT_DIR_PATH . 'lib/carbon-fields/vendor/autoload.php';
 		\Carbon_Fields\Carbon_Fields::boot();
+	}
+	
+	public function load_plugin_textdomain(){
+		load_plugin_textdomain( 'freelakit', false, basename( dirname( FREELAKIT_PLUGIN_FILE ) ) . '/languages' ); 
 	}
 	
 	public function getModule( $module ){
