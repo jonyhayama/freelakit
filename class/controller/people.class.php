@@ -58,7 +58,7 @@ class People{
 			'label'                 => __( 'Person', 'freelakit' ),
 			'description'           => __( 'List of people', 'freelakit' ),
 			'labels'                => $labels,
-			'supports'              => array( 'title' ),
+			'supports'              => array( 'title', 'thumbnail' ),
 			'taxonomies'            => array( 'person_role' ),
 			'hierarchical'          => false,
 			'public'                => false,
@@ -172,7 +172,8 @@ class People{
 				Field::make( 'text', 'person_first_name', __( 'First Name', 'freelakit' ) )
 				->set_width( 50 ),
 				Field::make( 'text', 'person_last_name', __('Last Name', 'freelakit' ) )
-				->set_width( 50 )
+				->set_width( 50 ),
+				Field::make( 'text', 'person_website', __('Website', 'freelakit' ) ),
 			) )
 			->add_tab( __( 'Contact Info', 'freelakit' ), array(
 				Field::make( 'textarea', 'address', __( 'Address', 'freelakit' ) )
