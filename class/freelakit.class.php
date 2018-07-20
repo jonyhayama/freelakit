@@ -13,6 +13,9 @@ class FreelaKit{
 		
 		require FREELAKIT_DIR_PATH . 'class/controller/people.class.php';
 		$this->people = new FreelaKit\controller\People;
+		
+		require FREELAKIT_DIR_PATH . 'class/controller/project.class.php';
+		$this->project = new FreelaKit\controller\Project;
 	}
 	
 	public function load_carbon_fields(){
