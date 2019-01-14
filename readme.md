@@ -1,6 +1,6 @@
 # Freela Kit
 
-**Under Development**
+**Discontinued**
 
 Plugin URI: https://github.com/jonyhayama/freelakit
 
